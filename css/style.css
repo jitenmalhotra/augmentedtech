@@ -2,7 +2,11 @@
 
 * {
   font-family: 'Roboto';
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
+}
+
+body {
+  margin: 0;
 }
 
 .text-left {
@@ -32,10 +36,39 @@
 }
 
 .red-button {
-  padding: 8px 12px;
-  background: #E53935;
+  padding: 8px 24px;
+  background: #ec2c29;
   color: white;
   font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.red-button:hover {
+  background: #f55555;
+}
+
+span.red-button {
+  display: inline-block;
+}
+
+span.v-align-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.card {
+  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-grey {
+  color: #595E63
 }
 
 /* Display */
@@ -75,6 +108,9 @@
 }
 .mb-20 {
   margin-bottom: 20px;
+}
+.mb-70 {
+  margin-bottom: 70px
 }
 
 .ml-40 {
@@ -173,29 +209,61 @@
 /** Header **/
 header {
   display: flex;
-  height: 40px;
-  padding: 10px;
+  height: 70px;
+  background: #E53935;
+  color: white;
 }
 
 .logo {
   width: 200px;
   flex-grow: 0;
   flex-shrink: 1;
+  padding: 10px;
+}
+
+.logo-cname {
+  font-size: 14px;
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+
+.logo-cname > div:first-child {
+  font-size: 24px;
+  font-family: 'Dosis';
+  text-transform: uppercase;
 }
 
 .menu {
   flex-grow: 1;
+  padding: 0 20px 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-item {
+  line-height: 50px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  opacity: 0.8;
 }
 
 /** Banner **/
 section.banner {
   height: 500px;
+  background: url('../img/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px;
 }
 
 /** Key Offerings **/
 section.key-offerings {
   height: 250px;
-  background: #fff;
+  background: #e0e0e0;
   position: relative;
 }
 
@@ -215,7 +283,39 @@ section.key-offerings {
 }
 
 /** Our Services **/
-
 section.our-services {
   padding: 25px 80px;
+  background-color: #e0e0e0;
+}
+
+/** Footer **/
+footer {
+  height: 150px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-cname {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 36px;
+  text-align: left;
+  color: black;
+}
+
+.footer-social {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-social img {
+  padding: 0 5px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.footer-social img:hover {
+  opacity: 0.8;
 }
